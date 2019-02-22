@@ -10,23 +10,29 @@ import java.util.Map;
 import java.util.Set;
 
 public class RequestHandler {
+    String auth="";
 
     public Response postRequest(String uri, Map reqbody){
 
         RequestSpecification request = RestAssured.given();
         JSONObject requestpara = new JSONObject();
 
-        //Traversing map
-        Set set=reqbody.entrySet();
-        Iterator itr = set.iterator();
-        while(itr.hasNext())
-        {
-            Map.Entry entry=(Map.Entry)itr.next();
-            requestpara.put(entry.getKey().toString(),entry.getValue().toString());
+       if(!reqbody.isEmpty()) {
+           //Traversing map
+           Set set = reqbody.entrySet();
+           Iterator itr = set.iterator();
+           while (itr.hasNext()) {
+               Map.Entry entry = (Map.Entry) itr.next();
+               requestpara.put(entry.getKey().toString(), entry.getValue().toString());
 
-        }
+           }
+       }
 
         request.header("Content-Type", "application/json");
+        //Set Authorization
+        if(!auth.equals("")) {
+            request.header("Authorization", auth);
+        }
         request.body(requestpara.toString());
         Response response = request.post(uri);
 
@@ -39,13 +45,18 @@ public class RequestHandler {
 
         //seting headers
         request.header("Content-Type", "application/json");
-        request.header("Authorization",auth);
+        request.header("Authorization", auth);
 
         //Hit url
         Response response = request.get(uri);
 
         //return response
         return response;
+    }
+
+    public void setauthorization(String auth){
+        this.auth=auth;
+
     }
 
 }
