@@ -23,11 +23,10 @@ public class GetRetailers extends BaseTest {
         //System.out.println(response.getBody().asString());
 
         //response assertion
-        //Assert.assertEquals(200,getRetailersresponse.getStatusCode());
+        Assert.assertEquals(200,getRetailersresponse.getStatusCode());
        // Assert.assertEquals(200 , getRetailersresponse.getStatusCode());
         Assert.assertEquals("application/json;charset=UTF-8",getRetailersresponse.getContentType());
 
-        System.out.println("end getretailers invalid test");
 
     }
 
