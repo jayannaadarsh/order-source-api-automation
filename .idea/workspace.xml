@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b30a3fb5-759e-4632-a980-e48faa52f23e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GetDistributors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GetProducts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetRetailers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetRetailers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/RequestHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ForgotPassword_ValidTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ForgotPassword_ValidTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GetRetailers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GetRetailers.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,11 +18,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="204">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/GetProducts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utilities/RequestHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +104,7 @@
         <option value="$PROJECT_DIR$/src/test/java/GetRetailers.java" />
         <option value="$PROJECT_DIR$/src/test/java/GetDistributors.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/GetProducts.java" />
       </list>
     </option>
   </component>
@@ -165,7 +200,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551353649764" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551423861437" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -189,7 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.GetDistributors">
+  <component name="RunManager" selected="TestNG.GetProducts">
     <configuration name="ForgotPassword_ValidTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OrderSource" />
       <option name="PACKAGE_NAME" value="" />
@@ -210,20 +245,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetRetailers" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetProducts" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OrderSource" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetRetailers" />
+      <option name="MAIN_CLASS_NAME" value="GetProducts" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login_ValidTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetRetailers" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OrderSource" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Login_ValidTest" />
+      <option name="MAIN_CLASS_NAME" value="GetRetailers" />
       <properties />
       <listeners />
       <method v="2">
@@ -242,11 +277,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetProducts" />
         <item itemvalue="TestNG.GetDistributors" />
         <item itemvalue="TestNG.GetRetailers" />
         <item itemvalue="TestNG.ValidateToken_ValidTest" />
         <item itemvalue="TestNG.ForgotPassword_ValidTest" />
-        <item itemvalue="TestNG.Login_ValidTest" />
       </list>
     </recent_temporary>
   </component>
@@ -268,31 +303,17 @@
       <option name="project" value="LOCAL" />
       <updated>1550846552861</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit getdistributors and retailers">
+      <created>1551353726442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551353726442</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ForgotPassword_ValidTest - 2019.02.22 at 19h 57m 22s.xml">
-      <configuration name="ForgotPassword_ValidTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ForgotPassword_ValidTest - 2019.02.22 at 20h 03m 48s.xml">
-      <configuration name="ForgotPassword_ValidTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="GetRetailers - 2019.02.22 at 20h 05m 19s.xml">
-      <configuration name="GetRetailers" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ValidateToken_ValidTest - 2019.02.22 at 20h 05m 44s.xml">
-      <configuration name="ValidateToken_ValidTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ValidateToken_ValidTest - 2019.02.22 at 20h 07m 57s.xml">
-      <configuration name="ValidateToken_ValidTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ValidateToken_ValidTest - 2019.02.22 at 20h 10m 27s.xml">
-      <configuration name="ValidateToken_ValidTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ValidateToken_ValidTest - 2019.02.27 at 18h 47m 34s.xml">
-      <configuration name="ValidateToken_ValidTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ValidateToken_ValidTest - 2019.02.27 at 18h 56m 09s.xml">
       <configuration name="ValidateToken_ValidTest" configurationId="TestNG" />
     </history-entry>
@@ -302,9 +323,31 @@
     <history-entry file="GetDistributors - 2019.02.27 at 18h 59m 32s.xml">
       <configuration name="GetDistributors" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 22m 15s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 24m 49s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 25m 41s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 31m 34s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 31m 43s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 32m 37s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GetProducts - 2019.03.01 at 12h 33m 23s.xml">
+      <configuration name="GetProducts" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31013617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -315,14 +358,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.10474632" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.2913257" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42880523" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.07364976" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.3617021" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.43698853" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.0" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.7561375" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -364,7 +407,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit validate token valid test" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit validate token valid test" />
+    <MESSAGE value="Commit getdistributors and retailers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit getdistributors and retailers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -547,40 +591,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/RequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ValidateToken_ValidTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GetRetailers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="27" column="100" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -597,10 +611,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/GetRetailers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="27" column="100" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="27" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="204">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utilities/RequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/GetProducts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
