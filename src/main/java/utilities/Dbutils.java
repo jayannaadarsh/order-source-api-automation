@@ -6,7 +6,9 @@ import java.sql.*;
 public class Dbutils {
     PropertyFileReader reader = new PropertyFileReader();
     String url;
-    ResultSet result;
+
+
+     ResultSet result;
 
     {
         try {
