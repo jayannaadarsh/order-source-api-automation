@@ -13,7 +13,7 @@ public class GetPendingOrders_ValidTest extends BaseTest {
     String getpendingorderURI ;
     Dbutils db = new Dbutils();
     int pendingcount;
-    int expectedstatuscode , expectedordernumber ;
+    int expectedstatuscode , expectedordernumber, expecteditemcount ;
 
     @Test
     public  void getpendingorders(){
@@ -71,6 +71,27 @@ public class GetPendingOrders_ValidTest extends BaseTest {
         //assert ordernumber
         //System.out.println("actual order number" + actualordernumber +"expected ordernumber"+ expectedordernumber);
         Assert.assertEquals(expectedordernumber, actualordernumber);
+
+        //Assert item count
+        String itemcountquery = "select count(*) from testing.item\n" +
+                "where order_id = (select id from testing.order where user_id=7 and status = \"PENDING\") \n" +
+                "and delete_flag = 0 and quantity !=0";
+
+        ResultSet itemcountresult = db.connectdb(itemcountquery);
+        try {
+            while (itemcountresult.next()) {
+                expecteditemcount = itemcountresult.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        int actualitemcount = Integer.parseInt(getpendingorderresponse.jsonPath().getString("itemCount"));
+        //System.out.println("actualitemcount" + actualitemcount +"expecteditemcount"+ expecteditemcount);
+        Assert.assertEquals(expecteditemcount, actualitemcount);
+
+
+
 
     }
 }
