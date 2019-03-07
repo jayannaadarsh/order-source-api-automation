@@ -22,7 +22,7 @@ public class ForgotPassword_ValidTest extends BaseTest {
 
             //Getting URI
             forgotpassworduri = propperty.readFile("BaseURL")+propperty.readFile("forgotpassword");
-            System.out.println(forgotpassworduri);
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,7 +45,7 @@ public class ForgotPassword_ValidTest extends BaseTest {
             e.printStackTrace();
         }
 
-        System.out.println("end forgetpassword valid test");
+        //System.out.println("end forgetpassword valid test");
 
 
 

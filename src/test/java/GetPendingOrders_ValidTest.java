@@ -29,6 +29,7 @@ public class GetPendingOrders_ValidTest extends BaseTest {
 
         Response getpendingorderresponse = request.getRequest(getpendingorderURI, auth);
 
+
         //get count of pwnding order for looged in user
         String query = "select count(*) from testing.order\n" +
                 "where user_id = 7 and status = \"PENDING\"";

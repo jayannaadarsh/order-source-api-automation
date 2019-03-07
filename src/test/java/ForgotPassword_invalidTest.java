@@ -20,8 +20,10 @@ public class ForgotPassword_invalidTest extends BaseTest {
         jsonbody = new HashMap();
         try {
             String invalidemail = propperty.readFile("email")+".com";
+            String baseurl = propperty.readFile("baseurl");
 
             jsonbody.put("email", invalidemail);
+            jsonbody.put("base_url",baseurl);
 
             //Getting URI
             forgotpassworduri=propperty.readFile("BaseURL")+propperty.readFile("forgotpassword");
@@ -46,7 +48,7 @@ public class ForgotPassword_invalidTest extends BaseTest {
             e.printStackTrace();
         }
 
-        System.out.println("end forgetpassword invalid test");
+        //System.out.println("end forgetpassword invalid test");
     }
 
 

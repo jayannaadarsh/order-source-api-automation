@@ -17,9 +17,7 @@ public class RefreshToken_ValidTest extends BaseTest
         // payload
        refreshToken = response.jsonPath().get("refreshToken");
         jsonbody = new HashMap();
-        System.out.println(refreshToken+"******************************1");
         jsonbody.put("refreshToken", refreshToken);
-        System.out.println(refreshToken+"******************************2");
 
         try {
             //getting refreshtoken uri
@@ -37,9 +35,7 @@ public class RefreshToken_ValidTest extends BaseTest
         //response JSON validation
         Assert.assertEquals(200,response.getStatusCode());
         Assert.assertEquals("application/json;charset=UTF-8",response.getContentType());
-        //System.out.println(response.getContentType());
 
-        System.out.println("end refresh token invalid test");
 
 
     }

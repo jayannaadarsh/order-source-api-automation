@@ -26,6 +26,7 @@ public class ValidateToken_ValidTest extends BaseTest {
 
         Response validatetokenresponse = request.postRequest(validatetokenURI, jsonbody);
 
+
         //assert status code
         Assert.assertEquals(200 , validatetokenresponse.getStatusCode());
 
@@ -33,8 +34,6 @@ public class ValidateToken_ValidTest extends BaseTest {
        Assert.assertEquals("Valid Token" , validatetokenresponse.jsonPath().getString("data"));
 
        Assert.assertEquals("true" , validatetokenresponse.jsonPath().getString("success"));
-
-       //System.out.println(validatetokenresponse.getBody().asString());
 
     }
 }

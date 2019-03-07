@@ -15,7 +15,7 @@ public class GetProducts extends BaseTest {
 
         try {
             getproductsURI = propperty.readFile("getproducts") + propperty.readFile("retailerid")+ propperty.readFile("retailerstoreid");
-            System.out.println(getproductsURI);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
