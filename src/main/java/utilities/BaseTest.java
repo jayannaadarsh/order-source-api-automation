@@ -16,7 +16,7 @@ public class BaseTest {
     public String acessToken = "";
     public String refreshToken = "";
     String loginuri;
-    public PropertyFileReader propperty = new PropertyFileReader() ;
+    public PropertyFileReader property = new PropertyFileReader() ;
     public RequestHandler request = new RequestHandler() ;
     Logger log = LogManager.getLogger(BaseTest.class.getName());
     public static Response response;
@@ -30,14 +30,14 @@ public class BaseTest {
 
         try {
             //Get login uri
-            String url=propperty.readFile("BaseURL");
-            String path=propperty.readFile("Login");
+            String url=property.readFile("BaseURL");
+            String path=property.readFile("Login");
 
             loginuri = url+path;
 
             //Add json body into map
-            jsonBody.put("email", propperty.readFile("email"));
-            jsonBody.put("password",propperty.readFile("password"));
+            jsonBody.put("email", property.readFile("email"));
+            jsonBody.put("password",property.readFile("password"));
 
         }
 

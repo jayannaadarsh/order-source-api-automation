@@ -21,8 +21,8 @@ public class RefreshToken_ValidTest extends BaseTest
 
         try {
             //getting refreshtoken uri
-            String path = propperty.readFile("refreshtoken");
-            String baseurl = propperty.readFile("BaseURL");
+            String path = property.readFile("refreshtoken");
+            String baseurl = property.readFile("BaseURL");
             refreshtokenuri = baseurl+path;
 
         } catch (IOException e) {

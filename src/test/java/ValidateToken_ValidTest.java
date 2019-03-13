@@ -19,7 +19,7 @@ public class ValidateToken_ValidTest extends BaseTest {
         request.setauthorization(auth);
 
         try {
-            validatetokenURI = propperty.readFile("BaseURL")+propperty.readFile("validatetoken");
+            validatetokenURI = property.readFile("BaseURL")+property.readFile("validatetoken");
         } catch (IOException e) {
             e.printStackTrace();
         }

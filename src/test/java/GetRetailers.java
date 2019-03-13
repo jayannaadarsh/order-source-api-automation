@@ -14,7 +14,7 @@ public class GetRetailers extends BaseTest {
         String auth = "Bearer "+ acessToken;
 
         try {
-            getretailersuri = propperty.readFile("BaseURL")+ propperty.readFile("getretailers");
+            getretailersuri = property.readFile("BaseURL")+ property.readFile("getretailers");
         } catch (IOException e) {
             e.printStackTrace();
         }

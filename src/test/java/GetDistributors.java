@@ -15,7 +15,7 @@ public class GetDistributors extends BaseTest {
         String auth = "Bearer "+ acessToken;
 
         try {
-            getdistributorURI = propperty.readFile("BaseURL") + propperty.readFile("getdistributors");
+            getdistributorURI = property.readFile("BaseURL") + property.readFile("getdistributors");
         } catch (IOException e) {
             e.printStackTrace();
         }

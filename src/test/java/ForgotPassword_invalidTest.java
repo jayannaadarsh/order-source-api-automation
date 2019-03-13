@@ -19,14 +19,14 @@ public class ForgotPassword_invalidTest extends BaseTest {
         //JSON payload
         jsonbody = new HashMap();
         try {
-            String invalidemail = propperty.readFile("email")+".com";
-            String baseurl = propperty.readFile("baseurl");
+            String invalidemail = property.readFile("email")+".com";
+            String baseurl = property.readFile("baseurl");
 
             jsonbody.put("email", invalidemail);
             jsonbody.put("base_url",baseurl);
 
             //Getting URI
-            forgotpassworduri=propperty.readFile("BaseURL")+propperty.readFile("forgotpassword");
+            forgotpassworduri=property.readFile("BaseURL")+property.readFile("forgotpassword");
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,10 +40,10 @@ public class ForgotPassword_invalidTest extends BaseTest {
 
         try {
             //validate sucess message
-            Assert.assertEquals(propperty.readForAssertion("forgotpassword_failure_message"),response.jsonPath().getString("data"));
+            Assert.assertEquals(property.readForAssertion("forgotpassword_failure_message"),response.jsonPath().getString("data"));
 
             //validate sucess=true
-            Assert.assertEquals(propperty.readForAssertion("success_invalid"),response.jsonPath().getString("success"));
+            Assert.assertEquals(property.readForAssertion("success_invalid"),response.jsonPath().getString("success"));
         } catch (IOException e) {
             e.printStackTrace();
         }

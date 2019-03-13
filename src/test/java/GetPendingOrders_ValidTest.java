@@ -22,7 +22,7 @@ public class GetPendingOrders_ValidTest extends BaseTest {
 
 
         try {
-            getpendingorderURI = propperty.readFile("BaseURL") + propperty.readFile("getpendingorder");
+            getpendingorderURI = property.readFile("BaseURL") + property.readFile("getpendingorder");
         } catch (IOException e) {
             e.printStackTrace();
         }
