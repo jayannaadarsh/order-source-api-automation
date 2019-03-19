@@ -78,6 +78,8 @@ public class Edititem_ValidTest extends BaseTest {
 
         request.setauthorization(auth);
         Response edititemresponse = request.putRequest( edititemurl , edititem_jsonbody);
+
+        Assert.assertEquals(200,edititemresponse.getStatusCode() );
         //System.out.println(edititemresponse.body().asString());
 
         String quantityquery = "SELECT quantity FROM testing.item\n" +
