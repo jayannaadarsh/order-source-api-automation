@@ -54,6 +54,36 @@ public class RequestHandler {
         return response;
     }
 
+
+    public Response putRequest(String uri, Map reqbody){
+
+        RequestSpecification request = RestAssured.given();
+        JSONObject requestpara = new JSONObject();
+
+        if(!reqbody.isEmpty()) {
+            //Traversing map
+            Set set = reqbody.entrySet();
+            Iterator itr = set.iterator();
+            while (itr.hasNext()) {
+                Map.Entry entry = (Map.Entry) itr.next();
+                requestpara.put(entry.getKey().toString(), entry.getValue().toString());
+
+            }
+        }
+
+        request.header("Content-Type", "application/json");
+        //Set Authorization
+        if(!auth.equals("")) {
+            request.header("Authorization", auth);
+        }
+        request.body(requestpara.toString());
+        Response response = request.put(uri);
+
+        return response;
+
+    }
+
+
     public void setauthorization(String auth){
         this.auth=auth;
 
