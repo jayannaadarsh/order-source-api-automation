@@ -5,7 +5,7 @@ import utilities.BaseTest;
 
 import java.io.IOException;
 
-public class GetDistributors extends BaseTest {
+public class GetDistributors_ValidTest extends BaseTest {
 
     private String getdistributorURI;
 

@@ -5,7 +5,7 @@ import utilities.BaseTest;
 
 import java.io.IOException;
 
-public class GetRetailers extends BaseTest {
+public class GetRetailers_ValidTest extends BaseTest {
     private String getretailersuri ;
 
     @Test
@@ -24,7 +24,7 @@ public class GetRetailers extends BaseTest {
 
         //response assertion
         Assert.assertEquals(200,getRetailersresponse.getStatusCode());
-       // Assert.assertEquals(200 , getRetailersresponse.getStatusCode());
+        // Assert.assertEquals(200 , getRetailersresponse.getStatusCode());
         Assert.assertEquals("application/json;charset=UTF-8",getRetailersresponse.getContentType());
 
 

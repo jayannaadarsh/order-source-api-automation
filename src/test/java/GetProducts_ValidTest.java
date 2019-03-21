@@ -5,7 +5,7 @@ import utilities.BaseTest;
 
 import java.io.IOException;
 
-public class GetProducts extends BaseTest {
+public class GetProducts_ValidTest extends BaseTest {
     private String getproductsURI;
 
     @Test
@@ -15,7 +15,6 @@ public class GetProducts extends BaseTest {
 
         try {
             getproductsURI = property.readFile("getproducts") + property.readFile("retailerid")+ property.readFile("retailerstoreid");
-
         } catch (IOException e) {
             e.printStackTrace();
         }

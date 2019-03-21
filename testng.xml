@@ -10,13 +10,14 @@
             <class name = "ForgotPassword_ValidTest"/>
             <class name = "ValidateToken_ValidTest"/>
             <class name = "GetDistributors"/>
-            <class name = "GetRetailers"/>
+            <class name = "GetRetailers_ValidTest"/>
             <class name = "GetPendingOrders_ValidTest"/>
             <class name = "AddItem_ValidTest"/>
             <class name = "Edititem_ValidTest"/>
             <class name = "GetAllOrders_ValidTest"/>
             <class name = "GetProductClass_ValidTest"/>
             <class name = "SubmitOrder_ValidTest"/>
+            <class name = "GetProducts_ValidTest"/>
 
         </classes>
     </test> <!-- Test -->
