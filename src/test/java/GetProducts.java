@@ -6,7 +6,7 @@ import utilities.BaseTest;
 import java.io.IOException;
 
 public class GetProducts extends BaseTest {
-    String getproductsURI;
+    private String getproductsURI;
 
     @Test
     public void getProductsTest(){

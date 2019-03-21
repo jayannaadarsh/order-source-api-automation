@@ -17,8 +17,8 @@ public class GetProductClass_ValidTest extends BaseTest {
     @Test
     public void productClassTest(){
         Dbutils db = new Dbutils();
-        Collection <String> expectedproductclass = new LinkedList<String>();
-        Collection <String> actualproductclass = new LinkedList<String>();
+        Collection <String> expectedproductclass = new LinkedList<>();
+        LinkedList<String> actualproductclass = new LinkedList<>();
         String productclassname;
         String query = "select name FROM testing.product_class;";
         ResultSet productclass = db.connectdb(query);
@@ -52,12 +52,11 @@ public class GetProductClass_ValidTest extends BaseTest {
             actualproductclass.add(name);
         }
 
-        for(int i=0; i<actualproductclass.size(); i++)
-        {
-            boolean contains = expectedproductclass.contains(((LinkedList<String>) actualproductclass).get(i));
+        for (String actualproductclass1 : actualproductclass) {
+            boolean contains = expectedproductclass.contains(actualproductclass1);
             //System.out.println("Expected:" +((LinkedList<String>) expectedproductclass).get(i) + "Actual:" + ((LinkedList<String>) actualproductclass).get(i));
             //Assert productclass name
-            Assert.assertEquals(true, contains);
+            Assert.assertTrue(contains);
         }
 
     }

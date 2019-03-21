@@ -1,4 +1,3 @@
-import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.BaseTest;
@@ -20,7 +19,7 @@ public class SubmitOrder_ValidTest extends BaseTest {
     @Test
     public void submitOrderTest() {
         String auth = "Bearer "+ acessToken;
-        int orderid=0;
+        int orderid;
         String status="";
 
 
@@ -35,7 +34,7 @@ public class SubmitOrder_ValidTest extends BaseTest {
                 e.printStackTrace();
             }
             request.setauthorization(auth);
-            Response submitorderresponse = request.putRequest(submitorderurl, submitorder_jsonbody);
+            request.putRequest(submitorderurl, submitorder_jsonbody);
             //System.out.println(submitorderresponse.getBody().asString());
 
             String statusquery = "SELECT status  FROM testing.`order`\n" +
@@ -118,7 +117,7 @@ public class SubmitOrder_ValidTest extends BaseTest {
     }
 
 
-    public int checkpendingorder(String auth) {
+    private int checkpendingorder(String auth) {
         int orderid = 0;
 
         String orderquery = "SELECT*  FROM testing.`order`\n" +

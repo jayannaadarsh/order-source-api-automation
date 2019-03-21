@@ -10,14 +10,13 @@ import java.util.Map;
 
 public class ForgotPassword_invalidTest extends BaseTest {
 
-    String forgotpassworduri;
-    Map jsonbody;
+    private String forgotpassworduri;
 
     @Test
     public void forgotPasswordInvalidTest(){
 
         //JSON payload
-        jsonbody = new HashMap();
+        Map<String,String> jsonbody = new HashMap<>();
         try {
             String invalidemail = property.readFile("email")+".com";
             String baseurl = property.readFile("baseurl");

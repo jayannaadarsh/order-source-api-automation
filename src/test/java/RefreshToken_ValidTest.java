@@ -9,14 +9,14 @@ import java.util.Map;
 
 public class RefreshToken_ValidTest extends BaseTest
 {
-    String refreshtokenuri;
-    Map jsonbody;
+    private String refreshtokenuri;
+
     @Test
     public void refreshTokenTest(){
 
         // payload
        refreshToken = response.jsonPath().get("refreshToken");
-        jsonbody = new HashMap();
+        Map<String, String> jsonbody = new HashMap<>();
         jsonbody.put("refreshToken", refreshToken);
 
         try {

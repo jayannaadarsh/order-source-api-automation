@@ -14,10 +14,10 @@ import java.util.LinkedList;
 
 public class GetAllOrders_ValidTest extends BaseTest {
 
-    String getallordersURL;
-    Collection<String> actualorders = new LinkedList<String>();
-    Collection<String> expectedorders = new LinkedList<String>();
-    Dbutils db = new Dbutils();
+    private String getallordersURL;
+    private Collection<String> actualorders = new LinkedList<>();
+    private Collection<String> expectedorders = new LinkedList<>();
+    private Dbutils db = new Dbutils();
 
     @Test
     public void getAllOrders(){
@@ -30,13 +30,13 @@ public class GetAllOrders_ValidTest extends BaseTest {
 
         Response getallordersresponse = request.getRequest(getallordersURL, auth);
         String getallordersbody = getallordersresponse.body().asString();
-        System.out.println(getallordersbody);
+        //System.out.println(getallordersbody);
 
         JSONArray values = new JSONArray(getallordersbody);
         for(int i=0; i<values.length(); i++){
             JSONObject obj = values.getJSONObject(i) ;
             String ordernumber = String.valueOf(obj.getInt("orderNumber"));            //String name = obj.getString("name");
-            System.out.println(ordernumber);
+            //System.out.println(ordernumber);
             actualorders.add(ordernumber);
 
         }
@@ -49,7 +49,7 @@ public class GetAllOrders_ValidTest extends BaseTest {
         try {
             while (orders.next()) {
                 ordernumber = String.valueOf(orders.getInt(1));
-                System.out.println(ordernumber);
+               // System.out.println(ordernumber);
                 expectedorders.add(ordernumber);
             }
         } catch (SQLException e) {
@@ -61,7 +61,7 @@ public class GetAllOrders_ValidTest extends BaseTest {
 
             boolean contains = expectedorders.contains(((LinkedList<String>) actualorders).get(i));
             //System.out.println(contains +"        " + ((LinkedList<String>) actualorders).get(i));
-            Assert.assertEquals(true, contains);
+            Assert.assertTrue(contains);
 
 
 

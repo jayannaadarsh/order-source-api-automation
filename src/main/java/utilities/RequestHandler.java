@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class RequestHandler {
-    String auth="";
+    private String auth="";
 
     public Response postRequest(String uri, Map reqbody){
 

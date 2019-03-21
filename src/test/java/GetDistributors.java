@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class GetDistributors extends BaseTest {
 
-    String getdistributorURI;
+    private String getdistributorURI;
 
     @Test
     public void getdistributors(){

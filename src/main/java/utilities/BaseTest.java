@@ -3,9 +3,6 @@ package utilities;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.*;
 import org.testng.annotations.BeforeClass;
-import utilities.PropertyFileReader;
-import utilities.RequestHandler;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,14 +15,14 @@ public class BaseTest {
     String loginuri;
     public PropertyFileReader property = new PropertyFileReader() ;
     public RequestHandler request = new RequestHandler() ;
-    Logger log = LogManager.getLogger(BaseTest.class.getName());
+    //Logger log = LogManager.getLogger(BaseTest.class.getName());
     public static Response response;
 
 
     @BeforeClass
 
     public void LoginToGetToken(){
-        Map jsonBody = new HashMap();
+        Map<String, String> jsonBody = new HashMap<>();
         //Map headers = new HashMap();
 
         try {

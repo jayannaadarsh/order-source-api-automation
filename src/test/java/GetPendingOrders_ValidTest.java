@@ -10,10 +10,10 @@ import java.sql.SQLException;
 
 public class GetPendingOrders_ValidTest extends BaseTest {
 
-    String getpendingorderURI ;
-    Dbutils db = new Dbutils();
-    int pendingcount;
-    int expectedstatuscode , expectedordernumber, expecteditemcount ;
+    private String getpendingorderURI ;
+    private Dbutils db = new Dbutils();
+    private int pendingcount;
+    private int expectedstatuscode , expectedordernumber, expecteditemcount ;
 
     @Test
     public  void getpendingorders(){
@@ -59,8 +59,8 @@ public class GetPendingOrders_ValidTest extends BaseTest {
         Assert.assertEquals("application/json;charset=UTF-8",getpendingorderresponse.getContentType());
 
         //query for order number
-        ResultSet dbresult1 = db.connectdb(ordernumberquery);
-        try {
+            ResultSet dbresult1 = db.connectdb(ordernumberquery);
+            try {
             while (dbresult1.next()) {
                 expectedordernumber = dbresult1.getInt(1);
             }
@@ -68,31 +68,33 @@ public class GetPendingOrders_ValidTest extends BaseTest {
             e.printStackTrace();
         }
 
-        int actualordernumber = Integer.parseInt(getpendingorderresponse.jsonPath().getString("orderNumber"));
-        //assert ordernumber
-        //System.out.println("actual order number" + actualordernumber +"expected ordernumber"+ expectedordernumber);
-        Assert.assertEquals(expectedordernumber, actualordernumber);
+            if(pendingcount>0) {
+                int actualordernumber = Integer.parseInt(getpendingorderresponse.jsonPath().getString("orderNumber"));
+                //assert ordernumber
+                //System.out.println("actual order number" + actualordernumber +"expected ordernumber"+ expectedordernumber);
+                Assert.assertEquals(expectedordernumber, actualordernumber);
 
-        //Assert item count
-        String itemcountquery = "select count(*) from testing.item\n" +
-                "where order_id = (select id from testing.order where user_id=7 and status = \"PENDING\") \n" +
-                "and delete_flag = 0 and quantity !=0";
+                //Assert item count
+                String itemcountquery = "select count(*) from testing.item\n" +
+                        "where order_id = (select id from testing.order where user_id=7 and status = \"PENDING\") \n" +
+                        "and delete_flag = 0 and quantity !=0";
 
-        ResultSet itemcountresult = db.connectdb(itemcountquery);
-        try {
-            while (itemcountresult.next()) {
-                expecteditemcount = itemcountresult.getInt(1);
+                ResultSet itemcountresult = db.connectdb(itemcountquery);
+                try {
+                    while (itemcountresult.next()) {
+                        expecteditemcount = itemcountresult.getInt(1);
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+                int actualitemcount = Integer.parseInt(getpendingorderresponse.jsonPath().getString("itemCount"));
+                //System.out.println("actualitemcount" + actualitemcount +"expecteditemcount"+ expecteditemcount);
+                Assert.assertEquals(expecteditemcount, actualitemcount);
+
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        int actualitemcount = Integer.parseInt(getpendingorderresponse.jsonPath().getString("itemCount"));
-        //System.out.println("actualitemcount" + actualitemcount +"expecteditemcount"+ expecteditemcount);
-        Assert.assertEquals(expecteditemcount, actualitemcount);
-
-
-
 
     }
+
+
 }

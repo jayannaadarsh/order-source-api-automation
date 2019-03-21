@@ -12,7 +12,12 @@
             <class name = "GetDistributors"/>
             <class name = "GetRetailers"/>
             <class name = "GetPendingOrders_ValidTest"/>
-            <class name = "GetProducts"/>
+            <class name = "AddItem_ValidTest"/>
+            <class name = "Edititem_ValidTest"/>
+            <class name = "GetAllOrders_ValidTest"/>
+            <class name = "GetProductClass_ValidTest"/>
+            <class name = "SubmitOrder_ValidTest"/>
+
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
