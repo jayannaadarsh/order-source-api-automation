@@ -23,8 +23,6 @@
     </build>
 
     <modelVersion>4.0.0</modelVersion>
-
-
     <groupId>OrderSourceAPIautomation</groupId>
     <artifactId>OrderSource</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -82,12 +80,6 @@
             <scope>compile</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M3</version>
-            <type>maven-plugin</type>
-        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

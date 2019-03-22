@@ -9,7 +9,7 @@
             <class name = "ForgotPassword_invalidTest"/>
             <class name = "ForgotPassword_ValidTest"/>
             <class name = "ValidateToken_ValidTest"/>
-            <class name = "GetDistributors"/>
+            <class name = "GetRetailers_ValidTest"/>
             <class name = "GetRetailers_ValidTest"/>
             <class name = "GetPendingOrders_ValidTest"/>
             <class name = "AddItem_ValidTest"/>

@@ -7,10 +7,10 @@ public class Login_ValidTest extends BaseTest {
    @Test
     public void validLoginTest()
     {
-        System.out.println("starting execution");
+        //System.out.println("starting execution");
         Assert.assertEquals(200,response.getStatusCode());
 
-        System.out.println("end login valid test");
+        //System.out.println("end login valid test");
     }
 
 
